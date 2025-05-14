@@ -1,0 +1,158 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\EmbarcaTech\Fase_2\Icarus\iverilog\lib\ivl\v2009.vpi";
+S_000002da3ad67180 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000002da3ad67310 .scope module, "tb_comparador" "tb_comparador" 3 4;
+ .timescale -9 -9;
+v000002da3ad614c0_0 .var "a", 1 0;
+v000002da3ad61d80_0 .var "b", 1 0;
+v000002da3ad616a0_0 .net "x", 0 0, L_000002da3ad63a30;  1 drivers
+S_000002da3ad64ee0 .scope module, "uut0" "comparador" 3 10, 4 30 0, S_000002da3ad67310;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /OUTPUT 1 "X";
+v000002da3ad61740_0 .net "A", 1 0, v000002da3ad614c0_0;  1 drivers
+v000002da3ad62280_0 .net "B", 1 0, v000002da3ad61d80_0;  1 drivers
+v000002da3ad61ce0_0 .net "X", 0 0, L_000002da3ad63a30;  alias, 1 drivers
+v000002da3ad620a0_0 .net "aux", 3 0, L_000002da3ad61ba0;  1 drivers
+L_000002da3ad61b00 .part v000002da3ad614c0_0, 0, 1;
+L_000002da3ad61880 .part v000002da3ad61d80_0, 0, 1;
+L_000002da3ad621e0 .part v000002da3ad614c0_0, 1, 1;
+L_000002da3ad61380 .part v000002da3ad61d80_0, 1, 1;
+L_000002da3ad61920 .part L_000002da3ad61ba0, 0, 1;
+L_000002da3ad61a60 .part L_000002da3ad61ba0, 1, 1;
+L_000002da3ad61ba0 .concat8 [ 1 1 1 1], L_000002da3ad66080, L_000002da3ad5a0a0, L_000002da3aea6ba0, L_000002da3ad669b0;
+L_000002da3ad61c40 .part L_000002da3ad61ba0, 2, 1;
+L_000002da3adbfda0 .part L_000002da3ad61ba0, 3, 1;
+S_000002da3ad65070 .scope module, "u0" "porta_xor" 4 38, 4 10 0, S_000002da3ad64ee0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "X";
+L_000002da3ad66080 .functor XOR 1, L_000002da3ad61b00, L_000002da3ad61880, C4<0>, C4<0>;
+v000002da3aea6dc0_0 .net "A", 0 0, L_000002da3ad61b00;  1 drivers
+v000002da3ad65200_0 .net "B", 0 0, L_000002da3ad61880;  1 drivers
+v000002da3ad652a0_0 .net "X", 0 0, L_000002da3ad66080;  1 drivers
+S_000002da3ad66690 .scope module, "u1" "porta_xor" 4 39, 4 10 0, S_000002da3ad64ee0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "X";
+L_000002da3ad5a0a0 .functor XOR 1, L_000002da3ad621e0, L_000002da3ad61380, C4<0>, C4<0>;
+v000002da3ad61560_0 .net "A", 0 0, L_000002da3ad621e0;  1 drivers
+v000002da3ad61ec0_0 .net "B", 0 0, L_000002da3ad61380;  1 drivers
+v000002da3ad61e20_0 .net "X", 0 0, L_000002da3ad5a0a0;  1 drivers
+S_000002da3ad66820 .scope module, "u2" "porta_not" 4 40, 4 1 0, S_000002da3ad64ee0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "X";
+L_000002da3aea6ba0 .functor NOT 1, L_000002da3ad61920, C4<0>, C4<0>, C4<0>;
+v000002da3ad61420_0 .net "A", 0 0, L_000002da3ad61920;  1 drivers
+v000002da3ad61f60_0 .net "X", 0 0, L_000002da3aea6ba0;  1 drivers
+S_000002da3aea6520 .scope module, "u3" "porta_not" 4 41, 4 1 0, S_000002da3ad64ee0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "X";
+L_000002da3ad669b0 .functor NOT 1, L_000002da3ad61a60, C4<0>, C4<0>, C4<0>;
+v000002da3ad61600_0 .net "A", 0 0, L_000002da3ad61a60;  1 drivers
+v000002da3ad62000_0 .net "X", 0 0, L_000002da3ad669b0;  1 drivers
+S_000002da3aea66b0 .scope module, "u4" "porta_and" 4 42, 4 20 0, S_000002da3ad64ee0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "X";
+L_000002da3ad63a30 .functor AND 1, L_000002da3ad61c40, L_000002da3adbfda0, C4<1>, C4<1>;
+v000002da3ad617e0_0 .net "A", 0 0, L_000002da3ad61c40;  1 drivers
+v000002da3ad619c0_0 .net "B", 0 0, L_000002da3adbfda0;  1 drivers
+v000002da3ad62140_0 .net "X", 0 0, L_000002da3ad63a30;  alias, 1 drivers
+    .scope S_000002da3ad67310;
+T_0 ;
+    %vpi_call/w 3 13 "$dumpfile", "waveform.vcd" {0 0 0};
+    %vpi_call/w 3 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002da3ad67310 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad614c0_0, 4, 1;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %pushi/vec4 1, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v000002da3ad61d80_0, 4, 1;
+    %delay 10, 0;
+    %vpi_call/w 3 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_comparador.sv";
+    "./comparador.sv";
