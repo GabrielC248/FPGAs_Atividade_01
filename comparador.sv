@@ -3,7 +3,7 @@ module porta_not (
   output X
 );
 
-assign X = ~A;
+  assign X = ~A;
 
 endmodule
 
@@ -13,7 +13,7 @@ module porta_xor (
   output X
 );
 
-assign X = A^B;
+  assign X = A^B;
 
 endmodule
 
@@ -23,7 +23,7 @@ module porta_and (
   output X
 );
 
-assign X = A&B;
+  assign X = A&B;
 
 endmodule
 
